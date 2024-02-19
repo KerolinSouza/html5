@@ -1,0 +1,153 @@
+@charset "uft-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color:black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(59, 39, 78);
+}
+
+h2 {
+    font-weight: 800;
+    color:antiquewhite;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 20px;
+    animation: surgir 7s ease-out;
+    animation-timeline:  view();
+    animation-range: cover -5% cover 40%;
+}
+
+section.modulo p {
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 1.4em;
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+
+section.modulo.content {
+    padding: 40px 0;
+    background: blueviolet;
+}
+
+section.modulo.parallax {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.modulo.parallax h1 {
+    color: rgb(125, 13, 230);
+    text-shadow: 5px 5px 5px aqua;
+    font-size: 4em;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 50;
+}
+
+section.modulo.parallax::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 50%, aqua 150%);
+}
+
+@keyframes surgir {
+    from {
+        opacity: 0;
+        translate: -100vw 0;
+    }
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+    }
+}
+
+
+section.modulo.parallax-1 {
+    background-image: url(https://www.cursoemvideo.com/wp-content/uploads/2019/08/html5.jpg);
+}
+
+@media all and (max-width: 760px) {
+
+    section.modulo p {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 1.5em;
+        padding-right: 10%;
+    }
+
+    section.modulo.parallax h1 {
+        color: black;
+        text-shadow: 5px 5px 5px aqua;
+        font-size: 2em;
+        text-transform: uppercase;
+        text-align: center;
+        z-index: 50;
+    }
+
+    section.modulo.content {
+        background: #fff;
+        padding: 10px;
+        padding-right: 15px;
+    }
+
+
+   
+    .container{
+        animation: surgir 5s ease-out;
+        animation-timeline: view();
+        animation-range: cover -0% cover 40%;
+    }
+}
+
+
+footer {
+    bottom: 0;
+    color: black;
+    left:15%;
+}
+
+input{
+    color:pink;
+    font-family:Arial, Helvetica, sans-serif;
+    height: 100px;
+    width: 100px;
+    background-color:black
+}
+
+section{
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    color: black
+}
+.ke{
+    text-align: center;
+    align-content: center;
+}
